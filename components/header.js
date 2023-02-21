@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: grey,
     width: "100%",
     padding: Platform.OS === "ios" ? 45 : 30,
+    // padding: 30,
   },
   headerText: {
     fontFamily: "Arial",

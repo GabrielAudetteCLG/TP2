@@ -1,56 +1,56 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import image from "../assets/tshirt.png";
-const grey = "#4C4C4C";
 const red = "#FF333A";
+const spacing = 20;
 
 const styles = StyleSheet.create({
-  produitLabel: {
-    color: grey,
-    paddingTop: 30,
-    paddingBottom: 30,
-    fontSize: "25px",
-    fontWeight: "bold",
-  },
   produitContainer: {
     backgroundColor: "#E3E3E3",
-    borderRadius: "15px",
+    borderRadius: 15,
     width: "90%",
-    paddingTop: "20px",
-    paddingBottom: "20px",
+    paddingTop: spacing,
+    paddingBottom: spacing,
+    marginBottom: spacing,
     flexDirection: "row",
   },
   produitInfoContainer: {
     flexDirection: "row",
-    // alignItems: "flex-end",
     justifyContent: "space-between",
-    // width: "80%",
+    height: "100%",
   },
   produitTextContainer: {
-    height: "100%",
+    height: 100,
+    width: "50%",
     justifyContent: "space-between",
-    paddingLeft: "20px",
-    fontSize: "20px",
+    paddingLeft: spacing,
+    fontSize: spacing,
   },
   produitTexte: {
-    fontSize: "20px",
+    fontSize: spacing,
     fontWeight: "semibold",
   },
   img: {
-    width: "100px",
-    height: "100px",
+    width: 100,
+    height: 100,
     borderRadius: "50%",
     border: "1px solid #4C4C4C",
   },
   imgContainer: {
-    paddingLeft: "20px",
+    paddingLeft: spacing,
   },
   buttonContainer: {
-    flexDirection: "row",
-    textAlign: "right",
+    backgroundColor: red,
     alignSelf: "center",
-    width: "20px",
-    height: "20px",
+    width: 40,
+    height: 40,
+    borderRadius: 999,
+    justifyContent: "center",
+  },
+  buttonText: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 30,
   },
 });
 
@@ -58,9 +58,6 @@ export default class Produit extends React.Component {
   render() {
     return (
       <>
-        <View>
-          <Text style={styles.produitLabel}>Liste de produits</Text>
-        </View>
         <View style={styles.produitContainer}>
           <View style={styles.imgContainer}>
             <Image style={styles.img} source={image} />
@@ -70,9 +67,9 @@ export default class Produit extends React.Component {
               <Text style={styles.produitTexte}>T Shirt</Text>
               <Text style={styles.produitTexte}>19.99$</Text>
             </View>
-            <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.buttonText}>X</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </>
