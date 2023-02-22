@@ -1,22 +1,6 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
-const green = "#2B9720";
-
-const styles = StyleSheet.create({
-  bouton: {
-    backgroundColor: green,
-    padding: 30,
-    borderBottomLeftRadius: "15px",
-    borderBottomRightRadius: "15px",
-  },
-  boutonText: {
-    fontFamily: "Arial",
-    fontSize: "20px",
-    fontWeight: "bold",
-    color: "white",
-    textAlign: "center",
-  },
-});
+import { Text, TouchableOpacity, Modal } from "react-native";
+import styles from "./style";
 
 export default class Bouton extends React.Component {
   render() {
