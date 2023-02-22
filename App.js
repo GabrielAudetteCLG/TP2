@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View, React, StatusBar } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 import Header from "./components/header";
 import Bouton from "./components/bouton";
 import Produit from "./components/produit";
 import styles from "./components/style.js";
 
-export default class App extends React.Component() {
+export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
