@@ -89,4 +89,40 @@ export default StyleSheet.create({
     color: "white",
     textAlign: "center",
   },
+  modal: {
+    marginTop: "50%",
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 15,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalContainer: {
+    flex: 1,
+    alignItems: "center",
+  },
+  modalInput: {
+    borderWidth: 1,
+    height: 50,
+    width: "100%",
+    margin: spacing,
+    borderRadius: 15,
+    textAlign: "center",
+  },
+  boutonClose: {
+    borderTopLeftRadius: "15px",
+    borderTopRightRadius: "15px",
+  },
+  boutonCloseText: {
+    color: "white",
+    fontWeight: "bold",
+  },
 });
