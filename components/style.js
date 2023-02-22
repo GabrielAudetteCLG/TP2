@@ -1,12 +1,12 @@
-import { StyleSheet } from "react-native";
-const green = "#2B9720";
-const red = "#FF333A";
+import { StyleSheet, Platform } from "react-native";
+const buttonGreen = "#2B9720";
+const cancelButtonRed = "#FF333A";
 const spacing = 20;
 const grey = "#4C4C4C";
 
 export default StyleSheet.create({
   bouton: {
-    backgroundColor: green,
+    backgroundColor: buttonGreen,
     padding: 30,
     borderBottomLeftRadius: "15px",
     borderBottomRightRadius: "15px",
@@ -65,7 +65,7 @@ export default StyleSheet.create({
     paddingLeft: spacing,
   },
   buttonContainer: {
-    backgroundColor: red,
+    backgroundColor: cancelButtonRed,
     alignSelf: "center",
     width: 40,
     height: 40,
