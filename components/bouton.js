@@ -15,6 +15,18 @@ export default class Bouton extends React.Component {
     nomProduit: "",
     prixProduit: "",
     imageProduit: "",
+    produits: [],
+  };
+
+  ajouterProduit = () => {
+    const produitsExistant = this.state.produits;
+    const nouveauProduitNom = this.state.nomProduit;
+    const nouveauProduitPrix = this.state.prixProduit;
+    const nouveauProduitImage = this.state.imageProduit;
+    console.log(`Nom : ${nouveauProduitNom}`);
+    console.log(`Prix : ${nouveauProduitPrix}`);
+    console.log(`Image : ${nouveauProduitImage}`);
+    // this.setState({ modalVisible: !modalVisible });
   };
   render() {
     const { modalVisible } = this.state;
@@ -37,20 +49,32 @@ export default class Bouton extends React.Component {
                 style={styles.modalInput}
                 placeholder="Nom du produit"
                 placeholderTextColor="#000"
+                value={this.state.nomProduit}
+                onChangeText={(text) => {
+                  this.setState({ nomProduit: text });
+                }}
               />
               <TextInput
                 style={styles.modalInput}
                 placeholder="Prix du produit"
                 placeholderTextColor="#000"
+                value={this.state.prixProduit}
+                onChangeText={(text) => {
+                  this.setState({ prixProduit: text });
+                }}
               />
               <TextInput
                 style={styles.modalInput}
                 placeholder="Image du produit"
                 placeholderTextColor="#000"
+                value={this.state.imageProduit}
+                onChangeText={(text) => {
+                  this.setState({ imageProduit: text });
+                }}
               />
               <Pressable
                 style={[styles.boutonClose, styles.bouton]}
-                onPress={() => this.setState({ modalVisible: !modalVisible })}
+                onPress={this.ajouterProduit()}
               >
                 <Text style={styles.boutonCloseText}>Ajouter le produit</Text>
               </Pressable>
