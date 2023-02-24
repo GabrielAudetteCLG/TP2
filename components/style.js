@@ -1,12 +1,15 @@
 import { StyleSheet, Platform } from "react-native";
-const buttonGreen = "#2B9720";
-const cancelButtonRed = "#FF333A";
 const spacing = 20;
-const grey = "#4C4C4C";
+// Colors
+const principalColor = "#e87a5d";
+const secondaryColor = "#3b5ba5";
+const terciaryColor = "#f3b941";
 
 export default StyleSheet.create({
+  //Home Screen
+  //Home Screen Add Product Modal Button
   bouton: {
-    backgroundColor: buttonGreen,
+    backgroundColor: principalColor,
     padding: 30,
     borderBottomLeftRadius: "15px",
     borderBottomRightRadius: "15px",
@@ -15,23 +18,25 @@ export default StyleSheet.create({
     fontFamily: "Arial",
     fontSize: "20px",
     fontWeight: "bold",
-    color: "white",
+    color: secondaryColor,
     textAlign: "center",
   },
+  //Home Screen Background
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: terciaryColor,
     alignItems: "center",
   },
+  //Home Screen Product List
   produitLabel: {
-    color: grey,
+    color: secondaryColor,
     paddingTop: 30,
     paddingBottom: 30,
     fontSize: 25,
     fontWeight: "bold",
   },
   produitContainer: {
-    backgroundColor: "#E3E3E3",
+    backgroundColor: secondaryColor,
     borderRadius: 15,
     width: "90%",
     paddingTop: spacing,
@@ -54,6 +59,7 @@ export default StyleSheet.create({
   produitTexte: {
     fontSize: spacing,
     fontWeight: "semibold",
+    color: terciaryColor,
   },
   img: {
     width: 100,
@@ -64,8 +70,9 @@ export default StyleSheet.create({
   imgContainer: {
     paddingLeft: spacing,
   },
+  //Home Screen Button Delete Product
   buttonContainer: {
-    backgroundColor: cancelButtonRed,
+    backgroundColor: principalColor,
     alignSelf: "center",
     width: 40,
     height: 40,
@@ -74,11 +81,12 @@ export default StyleSheet.create({
   },
   buttonText: {
     textAlign: "center",
-    color: "white",
+    color: secondaryColor,
     fontSize: 30,
   },
+  //Header Screen
   header: {
-    backgroundColor: grey,
+    backgroundColor: secondaryColor,
     width: "100%",
     padding: Platform.OS === "ios" ? 45 : 30,
   },
@@ -86,13 +94,14 @@ export default StyleSheet.create({
     fontFamily: "Arial",
     fontSize: "32px",
     fontWeight: "bold",
-    color: "white",
+    color: terciaryColor,
     textAlign: "center",
   },
+  // Modal
   modal: {
     marginTop: "50%",
     margin: 20,
-    backgroundColor: "white",
+    backgroundColor: secondaryColor,
     borderRadius: 15,
     padding: 35,
     alignItems: "center",
@@ -113,16 +122,20 @@ export default StyleSheet.create({
     borderWidth: 1,
     height: 50,
     width: "100%",
+    color: terciaryColor,
     margin: spacing,
+    backgroundColor: terciaryColor,
     borderRadius: 15,
     textAlign: "center",
   },
+  // Modal Button Add/Close
   boutonClose: {
     borderTopLeftRadius: "15px",
     borderTopRightRadius: "15px",
+    color: secondaryColor,
   },
   boutonCloseText: {
-    color: "white",
+    color: secondaryColor,
     fontWeight: "bold",
   },
 });

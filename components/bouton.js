@@ -2,7 +2,6 @@ import React from "react";
 import {
   Text,
   TextInput,
-  TouchableOpacity,
   Modal,
   Pressable,
   View,
@@ -34,19 +33,25 @@ export default class Bouton extends React.Component {
           >
             <View style={styles.modal}>
               <TextInput
+                
                 style={styles.modalInput}
                 placeholder="Nom du produit"
-                placeholderTextColor="#000"
+                placeholderTextColor= "#000"
+                keyboardType="default"
               />
               <TextInput
                 style={styles.modalInput}
                 placeholder="Prix du produit"
                 placeholderTextColor="#000"
+                keyboardType="numeric"
               />
               <TextInput
                 style={styles.modalInput}
                 placeholder="Image du produit"
                 placeholderTextColor="#000"
+                // keyboardType "url" for ios and "default" for android
+                keyboardType= { Platform.OS === "ios" ? "url" : "default" }        
+                
               />
               <Pressable
                 style={[styles.boutonClose, styles.bouton]}

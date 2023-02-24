@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
 import image from "../assets/tshirt.png";
 import styles from "./style.js";
+
+
 export default class Produit extends React.Component {
   render() {
     return (
@@ -15,9 +17,9 @@ export default class Produit extends React.Component {
               <Text style={styles.produitTexte}>T Shirt</Text>
               <Text style={styles.produitTexte}>19.99$</Text>
             </View>
-            <TouchableOpacity style={styles.buttonContainer}>
+            <Pressable style={styles.buttonContainer}>
               <Text style={styles.buttonText}>X</Text>
-            </TouchableOpacity>
+            </Pressable>
           </View>
         </View>
       </>
