@@ -3,7 +3,7 @@ const spacing = 20;
 // Colors
 const primaryColor = "#e87a5d";
 const secondaryColor = "#3b5ba5";
-const tertiaryColor = "#f3b941";
+const tertiaryColor = "#fff";
 
 export default StyleSheet.create({
   //Home Screen
@@ -117,13 +117,13 @@ export default StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   modalInput: {
     borderWidth: 1,
     height: 50,
     width: "100%",
-    color: tertiaryColor,
+    color: "#000",
     margin: spacing,
     backgroundColor: tertiaryColor,
     borderRadius: 15,

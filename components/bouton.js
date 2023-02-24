@@ -1,25 +1,64 @@
 import React from "react";
-import { Text, TextInput, Modal, Pressable, View } from "react-native";
+import { Text, TextInput, Modal, Pressable, View, Alert } from "react-native";
 import styles from "./style";
+import listeProduit from "../Data/listeProduit";
+import Produit from "../components/produit";
 
+// Todo :
+// - Vérifier si on recois des données valables dans les textInput (juste du text, pas d'emojis / prix, s'assurer qu'on recois juste un nombre
+// - Render la data (listeProduit) qu'on passe dans la function ajouterProduit en tant qu'items dans
 export default class Bouton extends React.Component {
-  state = {
-    modalVisible: false,
-    nomProduit: "",
-    prixProduit: "",
-    imageProduit: "",
-    produits: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalVisible: false,
+      nomProduit: "",
+      prixProduit: "",
+      imageProduit: "",
+      listeProduit: listeProduit,
+    };
+  }
 
   ajouterProduit = () => {
-    const produitsExistant = this.state.produits;
-    const nouveauProduitNom = this.state.nomProduit;
-    const nouveauProduitPrix = this.state.prixProduit;
-    const nouveauProduitImage = this.state.imageProduit;
-    console.log(`Nom : ${nouveauProduitNom}`);
-    console.log(`Prix : ${nouveauProduitPrix}`);
-    console.log(`Image : ${nouveauProduitImage}`);
-    // this.setState({ modalVisible: !modalVisible });
+    function id() {
+      return Math.random().toString(30).substring(5, 15);
+    }
+    fetch(this.state.imageProduit)
+      .then((response) => {
+        if (response.ok) {
+          // Si l'image est valide
+          if (
+            this.state.nomProduit !== "" &&
+            this.state.prixProduit !== "" &&
+            this.state.imageProduit !== ""
+          ) {
+            let produit = {
+              id: id(),
+              nomProduit: this.state.nomProduit,
+              prixProduit: this.state.prixProduit,
+              imageProduit: this.state.imageProduit,
+            };
+            listeProduit.push(produit);
+            this.setState({
+              nomProduit: "",
+              prixProduit: "",
+              imageProduit: "",
+              listeProduit: listeProduit,
+            });
+            console.log(JSON.stringify(listeProduit));
+            this.setState({ modalVisible: !this.state.modalVisible });
+          } else {
+            Alert.alert("Les champs ne peuvent pas être vide");
+          }
+        } else {
+          // Si l'image n'est pas valide avec le fetch
+          Alert.alert("L'URL de l'image n'est pas valide'");
+        }
+      })
+      .catch((err) => {
+        // Si l'image n'est pas valide avec le fetch, catch l'erreur
+        Alert.alert("L'URL de l'image n'est pas valide'");
+      });
   };
   render() {
     const { modalVisible } = this.state;
@@ -53,6 +92,7 @@ export default class Bouton extends React.Component {
                 placeholder="Prix du produit"
                 placeholderTextColor="#000"
                 keyboardType="numeric"
+                returnKeyType="done"
                 value={this.state.prixProduit}
                 onChangeText={(text) => {
                   this.setState({ prixProduit: text });
@@ -71,10 +111,7 @@ export default class Bouton extends React.Component {
               />
               <Pressable
                 style={[styles.boutonClose, styles.bouton]}
-                onPress={this.ajouterProduit()}
-                onPressOut={() =>
-                  this.setState({ modalVisible: !modalVisible })
-                }
+                onPress={this.ajouterProduit}
               >
                 <Text style={styles.boutonCloseText}>Ajouter le produit</Text>
               </Pressable>
@@ -87,6 +124,7 @@ export default class Bouton extends React.Component {
             <Text style={styles.boutonText}>Ajouter un produit</Text>
           </Pressable>
         </View>
+        <Produit listeProduit={this.state.listeProduit} />
       </>
     );
   }

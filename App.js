@@ -3,7 +3,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import Header from "./components/header";
 import Bouton from "./components/bouton";
-import Produit from "./components/produit";
+// import Produit from "./components/produit";
 import styles from "./components/style.js";
 
 export default class App extends React.Component {
@@ -16,9 +16,9 @@ export default class App extends React.Component {
         <View>
           <Text style={styles.produitLabel}>Liste de produits</Text>
         </View>
+        {/* <Produit />
         <Produit />
-        <Produit />
-        <Produit />
+        <Produit /> */}
       </View>
     );
   }
