@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Text,
-  TextInput,
-  Modal,
-  Pressable,
-  View,
-} from "react-native";
+import { Text, TextInput, Modal, Pressable, View } from "react-native";
 import styles from "./style";
 
 export default class Bouton extends React.Component {
@@ -45,10 +39,9 @@ export default class Bouton extends React.Component {
           >
             <View style={styles.modal}>
               <TextInput
-                
                 style={styles.modalInput}
                 placeholder="Nom du produit"
-                placeholderTextColor= "#000"
+                placeholderTextColor="#000"
                 keyboardType="default"
                 value={this.state.nomProduit}
                 onChangeText={(text) => {
@@ -70,7 +63,7 @@ export default class Bouton extends React.Component {
                 placeholder="Image du produit"
                 placeholderTextColor="#000"
                 // keyboardType "url" for ios and "default" for android
-                keyboardType= { Platform.OS === "ios" ? "url" : "default" }        
+                keyboardType={Platform.OS === "ios" ? "url" : "default"}
                 value={this.state.imageProduit}
                 onChangeText={(text) => {
                   this.setState({ imageProduit: text });
@@ -79,6 +72,9 @@ export default class Bouton extends React.Component {
               <Pressable
                 style={[styles.boutonClose, styles.bouton]}
                 onPress={this.ajouterProduit()}
+                onPressOut={() =>
+                  this.setState({ modalVisible: !modalVisible })
+                }
               >
                 <Text style={styles.boutonCloseText}>Ajouter le produit</Text>
               </Pressable>

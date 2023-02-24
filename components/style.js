@@ -1,15 +1,15 @@
 import { StyleSheet, Platform } from "react-native";
 const spacing = 20;
 // Colors
-const principalColor = "#e87a5d";
+const primaryColor = "#e87a5d";
 const secondaryColor = "#3b5ba5";
-const terciaryColor = "#f3b941";
+const tertiaryColor = "#f3b941";
 
 export default StyleSheet.create({
   //Home Screen
   //Home Screen Add Product Modal Button
   bouton: {
-    backgroundColor: principalColor,
+    backgroundColor: primaryColor,
     padding: 30,
     borderBottomLeftRadius: "15px",
     borderBottomRightRadius: "15px",
@@ -24,7 +24,7 @@ export default StyleSheet.create({
   //Home Screen Background
   container: {
     flex: 1,
-    backgroundColor: terciaryColor,
+    backgroundColor: tertiaryColor,
     alignItems: "center",
   },
   //Home Screen Product List
@@ -59,7 +59,7 @@ export default StyleSheet.create({
   produitTexte: {
     fontSize: spacing,
     fontWeight: "semibold",
-    color: terciaryColor,
+    color: tertiaryColor,
   },
   img: {
     width: 100,
@@ -72,7 +72,7 @@ export default StyleSheet.create({
   },
   //Home Screen Button Delete Product
   buttonContainer: {
-    backgroundColor: principalColor,
+    backgroundColor: primaryColor,
     alignSelf: "center",
     width: 40,
     height: 40,
@@ -94,7 +94,7 @@ export default StyleSheet.create({
     fontFamily: "Arial",
     fontSize: "32px",
     fontWeight: "bold",
-    color: terciaryColor,
+    color: tertiaryColor,
     textAlign: "center",
   },
   // Modal
@@ -117,14 +117,15 @@ export default StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: "center",
+    justifyContent: "center",
   },
   modalInput: {
     borderWidth: 1,
     height: 50,
     width: "100%",
-    color: terciaryColor,
+    color: tertiaryColor,
     margin: spacing,
-    backgroundColor: terciaryColor,
+    backgroundColor: tertiaryColor,
     borderRadius: 15,
     textAlign: "center",
   },
@@ -138,4 +139,57 @@ export default StyleSheet.create({
     color: secondaryColor,
     fontWeight: "bold",
   },
+  /*
+const styles = StyleSheet.create({
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modal: {
+    backgroundColor: "#fff",
+    width: "80%",
+    height: "50%",
+    borderRadius: 10,
+    padding: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalInput: {
+    width: "100%",
+    height: 40,
+    borderColor: "#000",
+    borderWidth: 1,
+    borderRadius: 10,
+    marginBottom: 10,
+    paddingLeft: 10,
+  },
+  bouton: {
+    backgroundColor: "#000",
+    width: "80%",
+    height: 40,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  boutonText: {
+    color: "#fff",
+    fontSize: 18,
+  },
+  boutonClose: {
+    backgroundColor: "#fff",
+    width: "80%",
+    height: 40,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  boutonCloseText: {
+    color: "#000",
+    fontSize: 18,
+  },
+});
+*/
 });
