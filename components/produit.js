@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, Pressable, FlatList } from "react-native";
+import { View, Text, Image, Pressable, FlatList, SafeAreaView } from "react-native";
 import styles from "./style.js";
 import listeProduit from "../Data/listeProduit";
 let updatedListeProduit;
@@ -14,6 +14,7 @@ export default class Produit extends React.Component {
   };
 render() {
   return (
+    <SafeAreaView style={styles.safeAreaContainer}>
     <FlatList
       data={listeProduit}
       renderItem={({ item }) => (
@@ -40,6 +41,7 @@ render() {
       )}
       keyExtractor={(item) => item.id}
     />
+    </SafeAreaView>
   );
 }
 }

@@ -8,11 +8,12 @@ const tertiaryColor = "#fff";
 export default StyleSheet.create({
   //Home Screen
   //Home Screen Add Product Modal Button
-  bouton: {
+  boutonAjouterHeader: {
     backgroundColor: primaryColor,
     padding: 30,
     borderBottomLeftRadius: "15px",
     borderBottomRightRadius: "15px",
+    marginBottom: spacing,
   },
   boutonText: {
     fontFamily: "Arial",
@@ -20,6 +21,13 @@ export default StyleSheet.create({
     fontWeight: "bold",
     color: secondaryColor,
     textAlign: "center",
+  },
+  bouton: {
+    backgroundColor: primaryColor,
+    padding: 30,
+    borderBottomLeftRadius: "15px",
+    borderBottomRightRadius: "15px",
+    
   },
   //Home Screen Background
   container: {
@@ -38,7 +46,7 @@ export default StyleSheet.create({
   produitContainer: {
     backgroundColor: secondaryColor,
     borderRadius: 15,
-    width: "90%",
+    width: "98%",
     paddingTop: spacing,
     paddingBottom: spacing,
     marginBottom: spacing,
@@ -69,6 +77,14 @@ export default StyleSheet.create({
   },
   imgContainer: {
     paddingLeft: spacing,
+  },
+  //Safe Area View
+  safeAreaContainer: {
+    flex: 1,
+    backgroundColor: tertiaryColor,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: -545,
   },
   //Home Screen Button Delete Product
   buttonContainer: {

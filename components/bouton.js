@@ -118,7 +118,7 @@ export default class Bouton extends React.Component {
             </View>
           </Modal>
           <Pressable
-            style={styles.bouton}
+            style={styles.boutonAjouterHeader}
             onPress={() => this.setState({ modalVisible: !modalVisible })}
           >
             <Text style={styles.boutonText}>Ajouter un produit</Text>
