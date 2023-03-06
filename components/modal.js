@@ -24,45 +24,80 @@ export default class ModalBoite extends React.Component {
     };
   }
 
+  // ajouterProduit = () => {
+  //   // Changement de la valeur recue dans le textInput pour un Number
+  //   const prixProduit = parseFloat(this.state.prixProduit);
+  //   function id() {
+  //     return Math.random().toString(30).substring(5, 15);
+  //   }
+  //   if (
+  //     typeof this.state.nomProduit === 'string' &&
+  //     typeof prixProduit === 'number' &&
+  //     this.state.nomProduit !== '' &&
+  //     this.state.prixProduit !== '' &&
+  //     this.state.imageProduit !== ''
+  //   ) {
+  //     let produit = {
+  //       id: id(),
+  //       nomProduit: this.state.nomProduit,
+  //       prixProduit: this.state.prixProduit,
+  //       imageProduit: this.state.imageProduit,
+  //     };
+  //     const listeProduit = this.state.listeProduit;
+  //     listeProduit.push(produit);
+  //     this.setState({
+  //       nomProduit: '',
+  //       prixProduit: '',
+  //       imageProduit: '',
+  //       listeProduit: listeProduit,
+  //     });
+  //     this.setState({ modalVisible: !this.state.modalVisible });
+  //   } else {
+  //     Alert.alert('Les champs ne peuvent pas être vide ou ne sont pas valides');
+  //   }
+  // };
   ajouterProduit = () => {
-    console.log(this.state.imageProduit);
     // Changement de la valeur recue dans le textInput pour un Number
     const prixProduit = parseFloat(this.state.prixProduit);
     function id() {
       return Math.random().toString(30).substring(5, 15);
     }
+    // trouvé cette méthode pour valider une URL
+    const validURL = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     if (
       typeof this.state.nomProduit === 'string' &&
       typeof prixProduit === 'number' &&
       this.state.nomProduit !== '' &&
-      this.state.prixProduit !== '' &&
-      this.state.imageProduit !== ''
+      this.state.prixProduit !== ''
     ) {
-      let produit = {
-        id: id(),
-        nomProduit: this.state.nomProduit,
-        prixProduit: this.state.prixProduit,
-        imageProduit: this.state.imageProduit,
-      };
-      const listeProduit = this.state.listeProduit;
-      listeProduit.push(produit);
-      this.setState({
-        nomProduit: '',
-        prixProduit: '',
-        imageProduit: '',
-        listeProduit: listeProduit,
-      });
-      console.log(JSON.stringify(listeProduit));
-      this.setState({ modalVisible: !this.state.modalVisible });
+      if (validURL.test(this.state.imageProduit)) {
+        let produit = {
+          id: id(),
+          nomProduit: this.state.nomProduit,
+          prixProduit: this.state.prixProduit,
+          imageProduit: this.state.imageProduit,
+        };
+        const listeProduit = this.state.listeProduit;
+        listeProduit.push(produit);
+        this.setState({
+          nomProduit: '',
+          prixProduit: '',
+          imageProduit: '',
+          listeProduit: listeProduit,
+        });
+        this.setState({ modalVisible: !this.state.modalVisible });
+      } else if(this.state.imageProduit === '') {
+        Alert.alert('URL ne peut pas être vide')
+      } else {
+        Alert.alert('URL est invalide')
+      }
     } else {
       Alert.alert('Les champs ne peuvent pas être vide ou ne sont pas valides');
     }
   };
 
   suppressionProduit = (updatedListeProduit) => {
-    console.log('updated :' + JSON.stringify(updatedListeProduit));
     this.setState({ listeProduit: updatedListeProduit });
-    console.log('imported :' + JSON.stringify(listeProduitImporte));
   };
   render() {
     const { modalVisible } = this.state;

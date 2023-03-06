@@ -78,10 +78,10 @@ export default StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
     backgroundColor: tertiaryColor,
-    alignItems: "center",
-    justifyContent: "center",
-    //!hardcoded value temporary
-    marginTop: -540,
+    // alignItems: "center",
+    justifyContent: "flex-end",
+    height: "80%",
+    marginTop: '-100%',
   },
   img: {
     width: 100,
@@ -102,7 +102,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
-    right: '50',
+    right: '50px',
     textAlign: 'center',
     color: tertiaryColor,
     fontSize: 30,
