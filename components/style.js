@@ -37,6 +37,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: tertiaryColor,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   //Home Screen Product List
   produitLabel: {
@@ -46,7 +47,7 @@ export default StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     //!hardcoded value temporary
-    marginTop: -50,
+    marginTop: "-10%",
   },
   produitContainer: {
     backgroundColor: secondaryColor,
@@ -78,10 +79,11 @@ export default StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
     backgroundColor: tertiaryColor,
-    // alignItems: "center",
+    alignItems: "center",
     justifyContent: "flex-end",
     height: "80%",
-    marginTop: '-100%',
+    marginTop: '-125%',
+    marginBottom: '10%',
   },
   img: {
     width: 100,
@@ -102,7 +104,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
-    right: '50px',
     textAlign: 'center',
     color: tertiaryColor,
     fontSize: 30,
@@ -123,7 +124,7 @@ export default StyleSheet.create({
   },
   // Modal
   modal: {
-    marginTop: '50%',
+    marginTop: '65%',
     margin: 20,
     backgroundColor: secondaryColor,
     borderRadius: 15,
@@ -141,6 +142,7 @@ export default StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: 'center',
+
     // justifyContent: "center",
   },
   modalInput: {
@@ -155,7 +157,6 @@ export default StyleSheet.create({
   },
   modalTextTitle: {
     color: tertiaryColor,
-    
   },
   // Modal Button Add/Close
   boutonClose: {
