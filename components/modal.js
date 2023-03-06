@@ -25,7 +25,6 @@ export default class ModalBoite extends React.Component {
   }
 
   ajouterProduit = () => {
-    console.log(this.state.imageProduit);
     // Changement de la valeur recue dans le textInput pour un Number
     const prixProduit = parseFloat(this.state.prixProduit);
     function id() {
@@ -52,7 +51,6 @@ export default class ModalBoite extends React.Component {
         imageProduit: '',
         listeProduit: listeProduit,
       });
-      console.log(JSON.stringify(listeProduit));
       this.setState({ modalVisible: !this.state.modalVisible });
     } else {
       Alert.alert('Les champs ne peuvent pas être vide ou ne sont pas valides');
@@ -60,9 +58,7 @@ export default class ModalBoite extends React.Component {
   };
 
   suppressionProduit = (updatedListeProduit) => {
-    console.log('updated :' + JSON.stringify(updatedListeProduit));
     this.setState({ listeProduit: updatedListeProduit });
-    console.log('imported :' + JSON.stringify(listeProduitImporte));
   };
   render() {
     const { modalVisible } = this.state;
