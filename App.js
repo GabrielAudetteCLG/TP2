@@ -11,9 +11,6 @@ export default class App extends React.Component {
           <StatusBar style="auto" />
           <Header />
           <ModalBoite />
-          <View>
-            <Text style={styles.produitLabel}>Liste de produits</Text>
-          </View>
         </View>
     );
   }

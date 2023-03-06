@@ -45,11 +45,13 @@ export default StyleSheet.create({
     paddingBottom: 30,
     fontSize: 25,
     fontWeight: 'bold',
+    //!hardcoded value temporary
+    marginTop: -50,
   },
   produitContainer: {
     backgroundColor: secondaryColor,
     borderRadius: 15,
-    width: '90%',
+    width: '98%',
     paddingTop: spacing,
     paddingBottom: spacing,
     marginBottom: spacing,
@@ -78,7 +80,8 @@ export default StyleSheet.create({
     backgroundColor: tertiaryColor,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: -545,
+    //!hardcoded value temporary
+    marginTop: -540,
   },
   img: {
     width: 100,
@@ -101,7 +104,7 @@ export default StyleSheet.create({
   buttonText: {
     right: '50',
     textAlign: 'center',
-    color: secondaryColor,
+    color: tertiaryColor,
     fontSize: 30,
   },
   //Header Screen
@@ -109,6 +112,7 @@ export default StyleSheet.create({
     backgroundColor: secondaryColor,
     width: '100%',
     padding: Platform.OS === 'ios' ? 45 : 30,
+    alignItems: 'center',
   },
   headerText: {
     fontFamily: 'Arial',

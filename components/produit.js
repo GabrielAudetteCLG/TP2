@@ -14,6 +14,9 @@ export default class Produit extends React.Component {
     const { listeProduit } = this.props;
     return (
           <SafeAreaView style={styles.safeAreaContainer}>
+              <View>
+            <Text style={styles.produitLabel}>Liste de produits</Text>
+          </View>
       <FlatList
         data={listeProduit}
         renderItem={({ item }) => (
