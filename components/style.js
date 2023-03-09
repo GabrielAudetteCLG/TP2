@@ -21,7 +21,7 @@ export default StyleSheet.create({
     borderBottomRightRadius: 15,
   },
   boutonText: {
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'Roboto',
     fontSize: 20,
     fontWeight: 'bold',
     color: tertiaryColor,
@@ -116,7 +116,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   headerText: {
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'Roboto',
     fontSize: 32,
     fontWeight: 'bold',
     color: tertiaryColor,
