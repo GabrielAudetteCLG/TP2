@@ -117,7 +117,7 @@ export default StyleSheet.create({
   },
   headerText: {
     fontFamily: 'Arial',
-    fontSize: '32px',
+    fontSize: 32,
     fontWeight: 'bold',
     color: tertiaryColor,
     textAlign: 'center',
