@@ -11,14 +11,14 @@ export default StyleSheet.create({
   bouton: {
     backgroundColor: primaryColor,
     padding: 30,
-    borderBottomLeftRadius: '15px',
-    borderBottomRightRadius: '15px',
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
   },
   boutonModal: {
     backgroundColor: primaryColor,
     padding: 15,
-    borderBottomLeftRadius: '15px',
-    borderBottomRightRadius: '15px',
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
   },
   boutonText: {
     fontFamily: 'Arial',
@@ -160,8 +160,8 @@ export default StyleSheet.create({
   },
   // Modal Button Add/Close
   boutonClose: {
-    borderTopLeftRadius: '15px',
-    borderTopRightRadius: '15px',
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
     color: secondaryColor,
   },
   boutonCloseText: {
