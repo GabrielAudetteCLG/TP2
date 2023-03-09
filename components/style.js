@@ -1,16 +1,16 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform } from "react-native";
 const spacing = 20;
 // Colors
-const primaryColor = '#2a971f';
-const secondaryColor = '#4c4c4c';
-const tertiaryColor = '#fff';
+const primaryColor = "#2a971f";
+const secondaryColor = "#4c4c4c";
+const tertiaryColor = "#fff";
 
 export default StyleSheet.create({
   //Home Screen
   //Home Screen Add Product Modal Button
   bouton: {
     backgroundColor: primaryColor,
-    padding: 30,
+    padding: spacing,
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
   },
@@ -21,23 +21,33 @@ export default StyleSheet.create({
     borderBottomRightRadius: 15,
   },
   boutonText: {
-    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'Roboto',
+    fontFamily: Platform.OS === "ios" ? "Arial" : "Roboto",
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: tertiaryColor,
-    textAlign: 'center',
+    textAlign: "center",
+    paddingBottom: spacing / 2,
   },
   boutonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
   },
   //Home Screen Background
   container: {
     flex: 1,
     backgroundColor: tertiaryColor,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  //Safe Area View
+  safeAreaContainer: {
+    flex: 1,
+    alignItems: "center",
+    // justifyContent: 'flex-end',
+    height: "80%",
+    marginTop: Platform.OS === "ios" ? "-115%" : "-100%",
+    // marginBottom: '10%',
   },
   //Home Screen Product List
   produitLabel: {
@@ -45,44 +55,36 @@ export default StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 30,
     fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: "-10%",
+    fontWeight: "bold",
+    marginTop: "-5%",
+    backgroundColor: "transparent",
+    position: "relative",
   },
   produitContainer: {
     backgroundColor: secondaryColor,
     borderRadius: 15,
-    width: '98%',
+    width: "98%",
     paddingTop: spacing,
     paddingBottom: spacing,
     marginBottom: spacing,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   produitInfoContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: '100%',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    height: "100%",
   },
   produitTextContainer: {
     height: 100,
-    width: '50%',
-    justifyContent: 'space-between',
+    width: "50%",
+    justifyContent: "space-between",
     paddingLeft: spacing,
     fontSize: spacing,
   },
   produitTexte: {
     fontSize: spacing,
-    fontWeight: 'semibold',
+    fontWeight: "semibold",
     color: tertiaryColor,
-  },
-    //Safe Area View
-  safeAreaContainer: {
-    flex: 1,
-    backgroundColor: tertiaryColor,
-    alignItems: "center",
-    justifyContent: "flex-end",
-    height: "80%",
-    marginTop: '-125%',
-    marginBottom: '10%',
   },
   img: {
     width: 100,
@@ -97,40 +99,40 @@ export default StyleSheet.create({
   //Home Screen Button Delete Product
   buttonContainer: {
     backgroundColor: primaryColor,
-    alignSelf: 'center',
+    alignSelf: "center",
     width: 40,
     height: 40,
     borderRadius: 999,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   buttonText: {
-    textAlign: 'center',
+    textAlign: "center",
     color: tertiaryColor,
     fontSize: 30,
   },
   //Header Screen
   header: {
     backgroundColor: secondaryColor,
-    width: '100%',
-    padding: Platform.OS === 'ios' ? 45 : 30,
-    alignItems: 'center',
+    width: "100%",
+    padding: Platform.OS === "ios" ? 45 : 30,
+    alignItems: "center",
   },
   headerText: {
-    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'Roboto',
+    fontFamily: Platform.OS === "ios" ? "Arial" : "Roboto",
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: tertiaryColor,
-    textAlign: 'center',
+    textAlign: "center",
   },
   // Modal
   modal: {
-    marginTop: '65%',
+    marginTop: "50%",
     margin: 20,
     backgroundColor: secondaryColor,
     borderRadius: 15,
     padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -141,19 +143,19 @@ export default StyleSheet.create({
   },
   modalContainer: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
 
     // justifyContent: "center",
   },
   modalInput: {
     borderWidth: 1,
     height: 50,
-    width: '100%',
-    color: '#000',
+    width: "100%",
+    color: "#000",
     margin: spacing,
     backgroundColor: tertiaryColor,
     borderRadius: 15,
-    textAlign: 'center',
+    textAlign: "center",
   },
   modalTextTitle: {
     color: tertiaryColor,
@@ -166,6 +168,6 @@ export default StyleSheet.create({
   },
   boutonCloseText: {
     color: tertiaryColor,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
