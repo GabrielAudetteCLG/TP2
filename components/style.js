@@ -22,7 +22,7 @@ export default StyleSheet.create({
   },
   boutonText: {
     fontFamily: 'Arial',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
     color: tertiaryColor,
     textAlign: 'center',
