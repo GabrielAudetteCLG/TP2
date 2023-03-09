@@ -46,7 +46,6 @@ export default StyleSheet.create({
     paddingBottom: 30,
     fontSize: 25,
     fontWeight: 'bold',
-    //!hardcoded value temporary
     marginTop: "-10%",
   },
   produitContainer: {
@@ -88,8 +87,9 @@ export default StyleSheet.create({
   img: {
     width: 100,
     height: 100,
-    borderRadius: '50%',
-    border: '1px solid #4C4C4C',
+    borderRadius: 999,
+    borderColor: tertiaryColor,
+    borderWidth: 1,
   },
   imgContainer: {
     paddingLeft: spacing,
