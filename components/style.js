@@ -7,13 +7,13 @@ const tertiaryColor = "#fff";
 
 export default StyleSheet.create({
   //Home Screen
-  //Home Screen Add Product Modal Button
   bouton: {
     backgroundColor: primaryColor,
     padding: spacing,
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
   },
+  //Home Screen Add Product Modal Button
   boutonModal: {
     backgroundColor: primaryColor,
     padding: 15,
@@ -44,10 +44,8 @@ export default StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
     alignItems: "center",
-    // justifyContent: 'flex-end',
     height: "80%",
     marginTop: Platform.OS === "ios" ? "-115%" : "-100%",
-    // marginBottom: '10%',
   },
   //Home Screen Product List
   produitLabel: {
@@ -144,8 +142,6 @@ export default StyleSheet.create({
   modalContainer: {
     flex: 1,
     alignItems: "center",
-
-    // justifyContent: "center",
   },
   modalInput: {
     borderWidth: 1,

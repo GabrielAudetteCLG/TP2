@@ -29,7 +29,7 @@ export default class ModalBoite extends React.Component {
     function id() {
       return Math.random().toString(30).substring(5, 15);
     }
-    // trouvé cette méthode pour valider une URL
+    // trouvé cette méthode pour valider une URL, ensuite utiliser le fetch pour vérifier si l'image existe
     const validURL =
       /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     if (
